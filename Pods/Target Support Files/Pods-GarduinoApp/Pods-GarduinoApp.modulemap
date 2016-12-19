@@ -1,0 +1,6 @@
+framework module Pods_GarduinoApp {
+  umbrella header "Pods-GarduinoApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_GarduinoAppUITests {
+  umbrella header "Pods-GarduinoAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

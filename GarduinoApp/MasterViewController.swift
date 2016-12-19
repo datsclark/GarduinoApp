@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import Alamofire
+import SwiftyJSON
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
@@ -41,19 +43,23 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func insertNewObject(_ sender: Any) {
         let context = self.fetchedResultsController.managedObjectContext
         let newEvent = Event(context: context)
-             
-        // If appropriate, configure the new managed object.
-        newEvent.timestamp = NSDate()
-
-        // Save the context.
-        do {
-            try context.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        
+        getData() { dataPoints in
+            
+            newEvent.air_humidity = Float(dataPoints["air_humidity"]!)!
+            newEvent.timestamp = NSDate()
+            
+            do {
+                try context.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+            
         }
+
     }
 
     // MARK: - Segues
@@ -180,6 +186,42 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         self.tableView.endUpdates()
     }
+    
+    func getData(_ completionHandler: @escaping ([String: String]) -> ()) {
+        URLCache.shared.removeAllCachedResponses()
+        URLCache.shared.diskCapacity = 0
+        URLCache.shared.memoryCapacity = 0
+        
+        let url = "http://pigeon.datsclark.com:8008/rest/datarow/"
+        
+        var dataPoints = [String: String]()
+        
+        Alamofire.request(url).validate().responseJSON { response in
+            switch response.result {
+            case .success(let data):
+                print(data)
+                let json = JSON(data)
+                
+                
+                dataPoints["air_temp"] = json["results"][0]["air_temp"].stringValue
+                dataPoints["air_humidity"] = json["results"][0]["air_humidity"].stringValue
+                dataPoints["entry_date"] = json["results"][0]["entry_date"].stringValue
+                dataPoints["lumins"] = json["results"][0]["lumins"].stringValue
+                dataPoints["soil_temp"] = json["results"][0]["soil_temp"].stringValue
+                dataPoints["soil_vwc"] = json["results"][0]["soil_vwc"].stringValue
+                dataPoints["status"] = "ok"
+                
+                completionHandler(dataPoints as [String: String])
+                
+            case .failure(let error):
+                print("Request failed with error: \(error)")
+                dataPoints["status"] = "error"
+                completionHandler(dataPoints as [String: String])
+            }
+        }
+        
+    }
+
 
     /*
      // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.

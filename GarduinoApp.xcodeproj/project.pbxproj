@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92746AF059FC172BC20A534B /* Pods_GarduinoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805449ABEDF3F18C34C779FF /* Pods_GarduinoAppTests.framework */; };
+		98ABF0BE6B56D24E537018FA /* Pods_GarduinoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4F6A2808FE2AA61EAE916F /* Pods_GarduinoApp.framework */; };
 		F2D825351DC2A7D500EB01D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D825341DC2A7D500EB01D4 /* AppDelegate.swift */; };
 		F2D825381DC2A7D500EB01D4 /* GarduinoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2D825361DC2A7D500EB01D4 /* GarduinoApp.xcdatamodeld */; };
 		F2D8253A1DC2A7D500EB01D4 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D825391DC2A7D500EB01D4 /* MasterViewController.swift */; };
@@ -16,6 +18,7 @@
 		F2D825441DC2A7D500EB01D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D825421DC2A7D500EB01D4 /* LaunchScreen.storyboard */; };
 		F2D8254F1DC2A7D500EB01D4 /* GarduinoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8254E1DC2A7D500EB01D4 /* GarduinoAppTests.swift */; };
 		F2D8255A1DC2A7D500EB01D4 /* GarduinoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D825591DC2A7D500EB01D4 /* GarduinoAppUITests.swift */; };
+		F3F965474FE96A6F0C90CDB0 /* Pods_GarduinoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9412235349BD072F3A40C77B /* Pods_GarduinoAppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F14B4D7185FE43DC4BA3FB4 /* Pods-GarduinoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarduinoAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GarduinoAppTests/Pods-GarduinoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F2367ED21C15788B13761D7 /* Pods-GarduinoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarduinoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GarduinoApp/Pods-GarduinoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4C607664278D5ECF712D7643 /* Pods-GarduinoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarduinoAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GarduinoAppTests/Pods-GarduinoAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		6D4F6A2808FE2AA61EAE916F /* Pods_GarduinoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarduinoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		805449ABEDF3F18C34C779FF /* Pods_GarduinoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarduinoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9412235349BD072F3A40C77B /* Pods_GarduinoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarduinoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B843785369933E76B875A7A7 /* Pods-GarduinoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarduinoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GarduinoApp/Pods-GarduinoApp.release.xcconfig"; sourceTree = "<group>"; };
+		BC6033DD88478FE5620A95B7 /* Pods-GarduinoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarduinoAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GarduinoAppUITests/Pods-GarduinoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EFF10889B9A9EE093237EA68 /* Pods-GarduinoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarduinoAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GarduinoAppUITests/Pods-GarduinoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F2D825311DC2A7D500EB01D4 /* GarduinoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GarduinoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D825341DC2A7D500EB01D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2D825371DC2A7D500EB01D4 /* GarduinoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GarduinoApp.xcdatamodel; sourceTree = "<group>"; };
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98ABF0BE6B56D24E537018FA /* Pods_GarduinoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92746AF059FC172BC20A534B /* Pods_GarduinoAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F965474FE96A6F0C90CDB0 /* Pods_GarduinoAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		310E8AC16DD84FBA86CB5C86 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F2367ED21C15788B13761D7 /* Pods-GarduinoApp.debug.xcconfig */,
+				B843785369933E76B875A7A7 /* Pods-GarduinoApp.release.xcconfig */,
+				3F14B4D7185FE43DC4BA3FB4 /* Pods-GarduinoAppTests.debug.xcconfig */,
+				4C607664278D5ECF712D7643 /* Pods-GarduinoAppTests.release.xcconfig */,
+				BC6033DD88478FE5620A95B7 /* Pods-GarduinoAppUITests.debug.xcconfig */,
+				EFF10889B9A9EE093237EA68 /* Pods-GarduinoAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F229846A1DFBAA1900BD1B68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D4F6A2808FE2AA61EAE916F /* Pods_GarduinoApp.framework */,
+				805449ABEDF3F18C34C779FF /* Pods_GarduinoAppTests.framework */,
+				9412235349BD072F3A40C77B /* Pods_GarduinoAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F2D825281DC2A7D500EB01D4 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +123,8 @@
 				F2D8254D1DC2A7D500EB01D4 /* GarduinoAppTests */,
 				F2D825581DC2A7D500EB01D4 /* GarduinoAppUITests */,
 				F2D825321DC2A7D500EB01D4 /* Products */,
+				F229846A1DFBAA1900BD1B68 /* Frameworks */,
+				310E8AC16DD84FBA86CB5C86 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2D8255E1DC2A7D500EB01D4 /* Build configuration list for PBXNativeTarget "GarduinoApp" */;
 			buildPhases = (
+				57DBF6C64FA7FF4019E4BE10 /* [CP] Check Pods Manifest.lock */,
 				F2D8252D1DC2A7D500EB01D4 /* Sources */,
 				F2D8252E1DC2A7D500EB01D4 /* Frameworks */,
 				F2D8252F1DC2A7D500EB01D4 /* Resources */,
+				7D25B9B406B300D329E4558E /* [CP] Embed Pods Frameworks */,
+				57BDA83589F6F2B30F1850DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2D825611DC2A7D500EB01D4 /* Build configuration list for PBXNativeTarget "GarduinoAppTests" */;
 			buildPhases = (
+				F89B4EE8BB01B0D16C181404 /* [CP] Check Pods Manifest.lock */,
 				F2D825461DC2A7D500EB01D4 /* Sources */,
 				F2D825471DC2A7D500EB01D4 /* Frameworks */,
 				F2D825481DC2A7D500EB01D4 /* Resources */,
+				3C3C8EA0B9FF1DB151E2E9D0 /* [CP] Embed Pods Frameworks */,
+				D41747E926859C9FB4B5A4D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2D825641DC2A7D500EB01D4 /* Build configuration list for PBXNativeTarget "GarduinoAppUITests" */;
 			buildPhases = (
+				9C7D2F836D1141045B9F8DB1 /* [CP] Check Pods Manifest.lock */,
 				F2D825511DC2A7D500EB01D4 /* Sources */,
 				F2D825521DC2A7D500EB01D4 /* Frameworks */,
 				F2D825531DC2A7D500EB01D4 /* Resources */,
+				5E0E3D58580DD19079EB9026 /* [CP] Embed Pods Frameworks */,
+				A4E6243AC62133A613064A50 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,6 +311,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C3C8EA0B9FF1DB151E2E9D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GarduinoAppTests/Pods-GarduinoAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57BDA83589F6F2B30F1850DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GarduinoApp/Pods-GarduinoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57DBF6C64FA7FF4019E4BE10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5E0E3D58580DD19079EB9026 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GarduinoAppUITests/Pods-GarduinoAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D25B9B406B300D329E4558E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GarduinoApp/Pods-GarduinoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C7D2F836D1141045B9F8DB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A4E6243AC62133A613064A50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GarduinoAppUITests/Pods-GarduinoAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D41747E926859C9FB4B5A4D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GarduinoAppTests/Pods-GarduinoAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F89B4EE8BB01B0D16C181404 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F2D8252D1DC2A7D500EB01D4 /* Sources */ = {
@@ -421,6 +608,7 @@
 		};
 		F2D8255F1DC2A7D500EB01D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F2367ED21C15788B13761D7 /* Pods-GarduinoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7Q62VWGXSZ;
@@ -434,6 +622,7 @@
 		};
 		F2D825601DC2A7D500EB01D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B843785369933E76B875A7A7 /* Pods-GarduinoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7Q62VWGXSZ;
@@ -447,6 +636,7 @@
 		};
 		F2D825621DC2A7D500EB01D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F14B4D7185FE43DC4BA3FB4 /* Pods-GarduinoAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -462,6 +652,7 @@
 		};
 		F2D825631DC2A7D500EB01D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C607664278D5ECF712D7643 /* Pods-GarduinoAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -477,6 +668,7 @@
 		};
 		F2D825651DC2A7D500EB01D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC6033DD88478FE5620A95B7 /* Pods-GarduinoAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7Q62VWGXSZ;
@@ -491,6 +683,7 @@
 		};
 		F2D825661DC2A7D500EB01D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFF10889B9A9EE093237EA68 /* Pods-GarduinoAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7Q62VWGXSZ;
@@ -522,6 +715,7 @@
 				F2D825601DC2A7D500EB01D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2D825611DC2A7D500EB01D4 /* Build configuration list for PBXNativeTarget "GarduinoAppTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +724,7 @@
 				F2D825631DC2A7D500EB01D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2D825641DC2A7D500EB01D4 /* Build configuration list for PBXNativeTarget "GarduinoAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +733,7 @@
 				F2D825661DC2A7D500EB01D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
