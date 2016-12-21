@@ -10,17 +10,36 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var dateTimeLabel: UILabel!
+    @IBOutlet weak var airTempLabel: UILabel!
+    @IBOutlet weak var airHumidityLabel: UILabel!
+    @IBOutlet weak var luminsLabel: UILabel!
+    @IBOutlet weak var soilVWCLabel: UILabel!
+    @IBOutlet weak var soilTempLabel: UILabel!
     
-
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
+            if let label = self.dateTimeLabel {
                 label.text = detail.timestamp!.description
-                
-                
             }
+            if let label = self.airTempLabel {
+                label.text = detail.air_temp.description
+            }
+            if let label = self.airHumidityLabel {
+                label.text = detail.air_humidity.description
+            }
+            if let label = self.soilTempLabel {
+                label.text = detail.soil_temp.description
+            }
+            if let label = self.soilVWCLabel {
+                label.text = detail.soil_vwc.description
+            }
+            if let label = self.luminsLabel {
+                label.text = detail.lumins.description
+            }
+            
+            
         }
     }
 

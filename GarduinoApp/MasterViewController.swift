@@ -42,12 +42,22 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     func insertNewObject(_ sender: Any) {
         let context = self.fetchedResultsController.managedObjectContext
-        let newEvent = Event(context: context)
+        
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'"; //2016-12-20T18:05:53.688067Z
         
         getData() { dataPoints in
-            
-            newEvent.air_humidity = Float(dataPoints["air_humidity"]!)!
-            newEvent.timestamp = NSDate()
+            for dataPoint in dataPoints {
+                let newEvent = Event(context: context)
+                newEvent.air_humidity = Float(dataPoint["air_humidity"]!)!
+                newEvent.air_temp = Float(dataPoint["air_temp"]!)!
+                newEvent.soil_temp = Float(dataPoint["soil_temp"]!)!
+                newEvent.soil_vwc = Float(dataPoint["soil_vwc"]!)!
+                newEvent.lumins = Float(dataPoint["lumins"]!)!
+                newEvent.timestamp = NSDate()
+                newEvent.timestamp = dateFormatter.date(from: dataPoint["entry_date"]!) as NSDate?
+            }
             
             do {
                 try context.save()
@@ -61,6 +71,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
 
     }
+    
 
     // MARK: - Segues
 
@@ -187,39 +198,47 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.tableView.endUpdates()
     }
     
-    func getData(_ completionHandler: @escaping ([String: String]) -> ()) {
+    func getData(_ completionHandler: @escaping ([[String: String]]) -> ()) {
         URLCache.shared.removeAllCachedResponses()
         URLCache.shared.diskCapacity = 0
         URLCache.shared.memoryCapacity = 0
         
         let url = "http://pigeon.datsclark.com:8008/rest/datarow/"
         
-        var dataPoints = [String: String]()
+        var dataPoints = [[String: String]]()
+        
+        print("requesting data...")
         
         Alamofire.request(url).validate().responseJSON { response in
             switch response.result {
             case .success(let data):
-                print(data)
+                //print(data)
                 let json = JSON(data)
                 
+
                 
-                dataPoints["air_temp"] = json["results"][0]["air_temp"].stringValue
-                dataPoints["air_humidity"] = json["results"][0]["air_humidity"].stringValue
-                dataPoints["entry_date"] = json["results"][0]["entry_date"].stringValue
-                dataPoints["lumins"] = json["results"][0]["lumins"].stringValue
-                dataPoints["soil_temp"] = json["results"][0]["soil_temp"].stringValue
-                dataPoints["soil_vwc"] = json["results"][0]["soil_vwc"].stringValue
-                dataPoints["status"] = "ok"
-                
-                completionHandler(dataPoints as [String: String])
+                for (key, subJson) in json["results"] {
+                    var dataPoint = [String: String]()
+                    dataPoint["air_temp"] = subJson["air_temp"].stringValue
+                    dataPoint["air_humidity"] = subJson["air_humidity"].stringValue
+                    dataPoint["entry_date"] = subJson["entry_date"].stringValue
+                    dataPoint["lumins"] = subJson["lumins"].stringValue
+                    dataPoint["soil_temp"] = subJson["soil_temp"].stringValue
+                    dataPoint["soil_vwc"] = subJson["soil_vwc"].stringValue
+                    dataPoint["status"] = "ok"
+                    
+                    dataPoints.append(dataPoint)
+                }
+                //print(dataPoints)
+                completionHandler(dataPoints as [[String: String]])
                 
             case .failure(let error):
                 print("Request failed with error: \(error)")
-                dataPoints["status"] = "error"
-                completionHandler(dataPoints as [String: String])
+                dataPoints.append(["status" : "error"])
+                completionHandler(dataPoints as [[String: String]])
             }
         }
-        
+        //19TumbleWeed32
     }
 
 
