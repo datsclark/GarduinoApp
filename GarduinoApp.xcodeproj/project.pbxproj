@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		92746AF059FC172BC20A534B /* Pods_GarduinoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805449ABEDF3F18C34C779FF /* Pods_GarduinoAppTests.framework */; };
 		98ABF0BE6B56D24E537018FA /* Pods_GarduinoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4F6A2808FE2AA61EAE916F /* Pods_GarduinoApp.framework */; };
+		F2A154761E0C475A00A28928 /* GarduinoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A154751E0C475A00A28928 /* GarduinoData.swift */; };
 		F2D825351DC2A7D500EB01D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D825341DC2A7D500EB01D4 /* AppDelegate.swift */; };
 		F2D825381DC2A7D500EB01D4 /* GarduinoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2D825361DC2A7D500EB01D4 /* GarduinoApp.xcdatamodeld */; };
 		F2D8253A1DC2A7D500EB01D4 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D825391DC2A7D500EB01D4 /* MasterViewController.swift */; };
@@ -48,6 +49,7 @@
 		B843785369933E76B875A7A7 /* Pods-GarduinoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarduinoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GarduinoApp/Pods-GarduinoApp.release.xcconfig"; sourceTree = "<group>"; };
 		BC6033DD88478FE5620A95B7 /* Pods-GarduinoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarduinoAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GarduinoAppUITests/Pods-GarduinoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFF10889B9A9EE093237EA68 /* Pods-GarduinoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarduinoAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GarduinoAppUITests/Pods-GarduinoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F2A154751E0C475A00A28928 /* GarduinoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarduinoData.swift; sourceTree = "<group>"; };
 		F2D825311DC2A7D500EB01D4 /* GarduinoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GarduinoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D825341DC2A7D500EB01D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2D825371DC2A7D500EB01D4 /* GarduinoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GarduinoApp.xcdatamodel; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				F2D825421DC2A7D500EB01D4 /* LaunchScreen.storyboard */,
 				F2D825451DC2A7D500EB01D4 /* Info.plist */,
 				F2D825361DC2A7D500EB01D4 /* GarduinoApp.xcdatamodeld */,
+				F2A154751E0C475A00A28928 /* GarduinoData.swift */,
 			);
 			path = GarduinoApp;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				F2D825351DC2A7D500EB01D4 /* AppDelegate.swift in Sources */,
 				F2D8253A1DC2A7D500EB01D4 /* MasterViewController.swift in Sources */,
 				F2D8253C1DC2A7D500EB01D4 /* DetailViewController.swift in Sources */,
+				F2A154761E0C475A00A28928 /* GarduinoData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

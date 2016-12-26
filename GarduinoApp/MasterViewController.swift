@@ -44,8 +44,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let context = self.fetchedResultsController.managedObjectContext
         
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'"; //2016-12-20T18:05:53.688067Z
+
         
         getData() { dataPoints in
             for dataPoint in dataPoints {
@@ -55,7 +54,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 newEvent.soil_temp = Float(dataPoint["soil_temp"]!)!
                 newEvent.soil_vwc = Float(dataPoint["soil_vwc"]!)!
                 newEvent.lumins = Float(dataPoint["lumins"]!)!
-                newEvent.timestamp = NSDate()
                 newEvent.timestamp = dateFormatter.date(from: dataPoint["entry_date"]!) as NSDate?
             }
             
@@ -198,47 +196,48 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.tableView.endUpdates()
     }
     
-    func getData(_ completionHandler: @escaping ([[String: String]]) -> ()) {
+    func getData(_ completionHandler: @escaping ([GarduinoData]) -> ()) {
         URLCache.shared.removeAllCachedResponses()
         URLCache.shared.diskCapacity = 0
         URLCache.shared.memoryCapacity = 0
         
         let url = "http://pigeon.datsclark.com:8008/rest/datarow/"
         
-        var dataPoints = [[String: String]]()
+        //var dataPoints = [[String: String]]()
+        var dataPoints = [GarduinoData]()
         
         print("requesting data...")
         
         Alamofire.request(url).validate().responseJSON { response in
             switch response.result {
             case .success(let data):
-                //print(data)
                 let json = JSON(data)
-                
 
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'"; //2016-12-20T18:05:53.688067Z
                 
+                print (json)
                 for (key, subJson) in json["results"] {
-                    var dataPoint = [String: String]()
-                    dataPoint["air_temp"] = subJson["air_temp"].stringValue
-                    dataPoint["air_humidity"] = subJson["air_humidity"].stringValue
-                    dataPoint["entry_date"] = subJson["entry_date"].stringValue
-                    dataPoint["lumins"] = subJson["lumins"].stringValue
-                    dataPoint["soil_temp"] = subJson["soil_temp"].stringValue
-                    dataPoint["soil_vwc"] = subJson["soil_vwc"].stringValue
-                    dataPoint["status"] = "ok"
                     
-                    dataPoints.append(dataPoint)
+                    dataPoints.append(GarduinoData(id: subJson["id"].intValue,
+                                                   entryDate: dateFormatter.date(from: subJson["entry_date"].description),
+                                                   airTemp: subJson["air_temp"].floatValue,
+                                                   airHumidity: subJson["air_humidity"].floatValue,
+                                                   lumins: subJson["lumins"].floatValue,
+                                                   soilVWC: subJson["soil_vwc"].floatValue,
+                                                   soilTemp: subJson["soil_temp"].floatValue
+                                                )!)
+                    
                 }
-                //print(dataPoints)
-                completionHandler(dataPoints as [[String: String]])
+                
+                completionHandler(dataPoints as [GarduinoData])
                 
             case .failure(let error):
                 print("Request failed with error: \(error)")
-                dataPoints.append(["status" : "error"])
-                completionHandler(dataPoints as [[String: String]])
+                //dataPoints.append(["status" : "error"])
+                //completionHandler(dataPoints as [[String: String]])
             }
         }
-        //19TumbleWeed32
     }
 
 
